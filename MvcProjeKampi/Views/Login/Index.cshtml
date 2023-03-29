@@ -1,0 +1,67 @@
+﻿@model EntityLayer.Concrete.Admin
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Giriş Paneli</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/login-form-19/css/style.css">
+
+</head>
+<body  style="background-color:whitesmoke">
+    <section class="ftco-section">
+        <div class="container">
+            
+            <div class="row justify-content-center" >
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap py-5" style="background-color:black">
+                        <div class="img d-flex align-items-center justify-content-center" style="background-image: url(/AdminLTE-3.0.4/login-form-19/images/bg.jpg);"></div>
+                        <h3 class="text-center mb-0">Merhaba</h3>
+                        @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                        {
+                            <p class="text-center">
+                                Lütfen bilgilerinizi kutucuklara girin.
+                            </p>
+
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+                                @Html.TextBoxFor(x => x.AdminUsername, new { @class = "form-control", placeholder="Kullanıcı Adı"})
+                            </div>
+                            <div class="form-group">
+                                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-lock"></span></div>
+                                @Html.TextBoxFor(x => x.AdminPassword, new { @class = "form-control", placeholder = "***********", type = "password" })
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-100 text-md-right">
+                                    <a href="#" style="color:white">Şifremi Unuttum</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn form-control btn-primary rounded submit px-3">Giriş Yap</button>
+                            </div>
+                        }
+                        <div class="w-100 text-center mt-4 text">
+                            <a href="#" style="color:white">Ana Sayfaya Dön</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/jquery.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/popper.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/bootstrap.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/login-form-19/js/main.js"></script>
+
+</body>
+</html>
