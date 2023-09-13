@@ -9,7 +9,8 @@ Asp Net Mvc5 ile hazırlanmış admin ve yazar panelli, yazarların kategoriler
 - N Tier Architecture
 - MS SQL
 - Html, Css, Bootstrap
-###Projeden Görseller
+
+### Projeden Görseller
 
 ------------
 
